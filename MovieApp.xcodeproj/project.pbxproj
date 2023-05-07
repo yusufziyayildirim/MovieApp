@@ -54,6 +54,10 @@
 		F6DE6DB22A07CCE60028C1B8 /* MovieApp */ = {
 			isa = PBXGroup;
 			children = (
+				F6DE6DC72A07D0360028C1B8 /* Utilities */,
+				F6DE6DC92A07DE290028C1B8 /* Services */,
+				F6DE6DC82A07DE1C0028C1B8 /* Models */,
+				F6DE6DCA2A07DE340028C1B8 /* Core */,
 				F6DE6DB32A07CCE60028C1B8 /* AppDelegate.swift */,
 				F6DE6DB52A07CCE60028C1B8 /* SceneDelegate.swift */,
 				F6DE6DB72A07CCE60028C1B8 /* ViewController.swift */,
@@ -62,6 +66,50 @@
 				F6DE6DC12A07CCE60028C1B8 /* Info.plist */,
 			);
 			path = MovieApp;
+			sourceTree = "<group>";
+		};
+		F6DE6DC72A07D0360028C1B8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F6DE6DC82A07DE1C0028C1B8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F6DE6DC92A07DE290028C1B8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F6DE6DCA2A07DE340028C1B8 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F6DE6DCB2A07DE420028C1B8 /* Components */,
+				F6DE6DCC2A07DE560028C1B8 /* HomeScreen */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F6DE6DCB2A07DE420028C1B8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		F6DE6DCC2A07DE560028C1B8 /* HomeScreen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HomeScreen;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
