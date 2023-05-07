@@ -16,6 +16,7 @@
 		F6DE6DD22A07F7DD0028C1B8 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DD12A07F7DD0028C1B8 /* Movie.swift */; };
 		F6DE6DD42A08313B0028C1B8 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DD32A08313B0028C1B8 /* MovieService.swift */; };
 		F6DE6DD62A0833D60028C1B8 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DD52A0833D60028C1B8 /* HomeVC.swift */; };
+		F6DE6DD82A08382F0028C1B8 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DD72A08382F0028C1B8 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		F6DE6DD12A07F7DD0028C1B8 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		F6DE6DD32A08313B0028C1B8 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		F6DE6DD52A0833D60028C1B8 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		F6DE6DD72A08382F0028C1B8 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				F6DE6DD52A0833D60028C1B8 /* HomeVC.swift */,
+				F6DE6DD72A08382F0028C1B8 /* HomeViewModel.swift */,
 			);
 			path = HomeScreen;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 				F6DE6DCE2A07DFBF0028C1B8 /* NetworkManager.swift in Sources */,
 				F6DE6DD62A0833D60028C1B8 /* HomeVC.swift in Sources */,
 				F6DE6DD22A07F7DD0028C1B8 /* Movie.swift in Sources */,
+				F6DE6DD82A08382F0028C1B8 /* HomeViewModel.swift in Sources */,
 				F6DE6DB42A07CCE60028C1B8 /* AppDelegate.swift in Sources */,
 				F6DE6DD02A07F5B70028C1B8 /* NetworkHelpers.swift in Sources */,
 				F6DE6DB62A07CCE60028C1B8 /* SceneDelegate.swift in Sources */,

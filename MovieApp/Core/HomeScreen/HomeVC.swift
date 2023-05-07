@@ -7,13 +7,27 @@
 
 import UIKit
 
-class HomeVC: UIViewController {
+protocol HomeViewModelDelegate: AnyObject{
+    func configureVC()
+}
 
+final class HomeVC: UIViewController {
+    
+    private let viewModel = HomeViewModel()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
+        viewModel.viewDidLoad()
+    }
+    
+}
+
+
+extension HomeVC: HomeViewModelDelegate{
+    func configureVC() {
         view.backgroundColor = .systemRed
     }
     
-
-
 }
