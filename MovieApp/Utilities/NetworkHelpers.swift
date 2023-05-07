@@ -16,10 +16,10 @@ enum HttpMethod: String {
 }
 
 enum APIURLs {
-    static var apiKey = "e112ed72df8da5c3b38e4e6579896bc6&language"
+    static var apiKey = "cd60d1ee6ed9698b3893034008d54120"
     
     static func movies(page: Int) -> String {
-        "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)6&language=en-US&page=\(page)"
+        "https://api.themoviedb.org/3/movie/popular?api_key=\(apiKey)&language=en-US&page=\(page)"
     }
     
     static func imageURL(posterPath: String) -> String {
