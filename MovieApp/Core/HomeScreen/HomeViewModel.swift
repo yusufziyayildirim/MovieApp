@@ -21,5 +21,6 @@ final class HomeViewModel {
 extension HomeViewModel: HomeViewModelProtocol{
     func viewDidLoad() {
         delegate?.configureVC()
+        delegate?.configureCollectionView()
     }
 }
