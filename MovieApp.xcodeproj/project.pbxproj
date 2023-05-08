@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		F61DD19F2A09020B0091161C /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DD19E2A09020B0091161C /* UIView+Ext.swift */; };
 		F61DD1A12A0907600091161C /* CGFloat+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DD1A02A0907600091161C /* CGFloat+Ext.swift */; };
+		F61DD1A52A090D530091161C /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DD1A42A090D530091161C /* UIHelper.swift */; };
 		F6DE6DB42A07CCE60028C1B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DB32A07CCE60028C1B8 /* AppDelegate.swift */; };
 		F6DE6DB62A07CCE60028C1B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6DE6DB52A07CCE60028C1B8 /* SceneDelegate.swift */; };
 		F6DE6DBD2A07CCE60028C1B8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6DE6DBC2A07CCE60028C1B8 /* Assets.xcassets */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		F61DD19E2A09020B0091161C /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
 		F61DD1A02A0907600091161C /* CGFloat+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+Ext.swift"; sourceTree = "<group>"; };
+		F61DD1A42A090D530091161C /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		F6DE6DB02A07CCE60028C1B8 /* MovieApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6DE6DB32A07CCE60028C1B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F6DE6DB52A07CCE60028C1B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 			children = (
 				F6DE6DCD2A07DFBF0028C1B8 /* NetworkManager.swift */,
 				F6DE6DCF2A07F5B70028C1B8 /* NetworkHelpers.swift */,
+				F61DD1A42A090D530091161C /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				F6DE6DCE2A07DFBF0028C1B8 /* NetworkManager.swift in Sources */,
 				F6DE6DD62A0833D60028C1B8 /* HomeVC.swift in Sources */,
 				F6DE6DD22A07F7DD0028C1B8 /* Movie.swift in Sources */,
+				F61DD1A52A090D530091161C /* UIHelper.swift in Sources */,
 				F6DE6DD82A08382F0028C1B8 /* HomeViewModel.swift in Sources */,
 				F6DE6DB42A07CCE60028C1B8 /* AppDelegate.swift in Sources */,
 				F61DD19F2A09020B0091161C /* UIView+Ext.swift in Sources */,
