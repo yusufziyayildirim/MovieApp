@@ -10,6 +10,7 @@ import UIKit
 protocol HomeViewModelDelegate: AnyObject{
     func configureVC()
     func configureCollectionView()
+    func reloadCollectionView()
 }
 
 final class HomeVC: UIViewController {
@@ -43,11 +44,14 @@ extension HomeVC: HomeViewModelDelegate{
         collectionView.pinToEdgesOf(view: view)
     }
     
+    func reloadCollectionView() {
+        collectionView.reloadOnMainThread()
+    }
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        10
+        viewModel.movies.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -55,5 +59,15 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         
         cell.setCell(movie: viewModel.movies[indexPath.item])
         return cell
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        let contentHeight = scrollView.contentSize.height
+        let height = scrollView.frame.size.height
+        
+        if offsetY >= contentHeight - (3 * height) && viewModel.shouldDownloadMore {
+            viewModel.getMovies()
+        }
     }
 }

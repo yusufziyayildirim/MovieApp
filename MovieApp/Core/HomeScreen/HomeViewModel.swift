@@ -20,7 +20,8 @@ final class HomeViewModel {
     weak var delegate: HomeViewModelDelegate?
     private let service = MovieService()
     var movies: [MovieResult] = []
-    private var page: Int = 1
+    private var page: Int = 499
+    var shouldDownloadMore: Bool = true
 }
 
 
@@ -37,8 +38,16 @@ extension HomeViewModel: HomeViewModelProtocol{
             guard let returnedMovies = returnedMovies else { return }
             
             self.movies.append(contentsOf: returnedMovies.results ?? [])
+            
+            /*
+             It should be 'self.page >= returnedMovies.totalPages' but TMDB API does not allow requests to pages beyond 500. This may be due to the fact that we are using the free version of the API."
+             */
+            if self.page >= 500 {
+                shouldDownloadMore = false
+            }
+            
             self.page += 1
-            print(self.movies.count)
+            self.delegate?.reloadCollectionView()
         }
     }
 }
