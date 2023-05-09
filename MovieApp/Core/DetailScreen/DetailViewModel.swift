@@ -20,5 +20,11 @@ final class DetailViewModel {
 extension DetailViewModel: DetailViewModelProtocol{
     func viewDidLoad() {
         delegate?.configureVC()
+        delegate?.configurePosterImageView()
+        delegate?.downloadPosterImage()
+        delegate?.configureTitleLabel()
+        delegate?.configureDateLabel()
+        delegate?.configureVoteLabel()
+        delegate?.configureOverviewLabel()
     }
 }
