@@ -11,6 +11,7 @@ protocol HomeViewModelDelegate: AnyObject{
     func configureVC()
     func configureCollectionView()
     func reloadCollectionView()
+    func navigateToDetailScreen(movie: MovieResult)
 }
 
 final class HomeVC: UIViewController {
@@ -30,6 +31,7 @@ final class HomeVC: UIViewController {
 extension HomeVC: HomeViewModelDelegate{
     func configureVC() {
         view.backgroundColor = .systemGray
+        title = "Popular Movies"
     }
     
     func configureCollectionView() {
@@ -47,6 +49,13 @@ extension HomeVC: HomeViewModelDelegate{
     func reloadCollectionView() {
         collectionView.reloadOnMainThread()
     }
+    
+    func navigateToDetailScreen(movie: MovieResult) {
+        DispatchQueue.main.async {
+            let detailScreen = DetailVC(movie: movie)
+            self.navigationController?.pushViewController(detailScreen, animated: true)
+        }
+    }
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -61,6 +70,10 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
         return cell
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.getDetail(movieResult: viewModel.movies[indexPath.item])
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
@@ -70,4 +83,5 @@ extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource {
             viewModel.getMovies()
         }
     }
+    
 }

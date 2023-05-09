@@ -50,4 +50,8 @@ extension HomeViewModel: HomeViewModelProtocol{
             self.delegate?.reloadCollectionView()
         }
     }
+    
+    func getDetail(movieResult: MovieResult) {
+        self.delegate?.navigateToDetailScreen(movie: movieResult)
+    }
 }
